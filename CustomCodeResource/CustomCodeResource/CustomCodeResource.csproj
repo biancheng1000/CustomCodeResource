@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CommonFunction.cs" />
     <Compile Include="Common\ExcelOp.cs" />
     <Compile Include="Common\ExportAttribute.cs" />
     <Compile Include="Common\LogText.cs" />
