@@ -54,6 +54,7 @@
     <Compile Include="UserControl\CanvasItemsControl .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AttachProperty\VisibilityAnimation.cs" />
+    <Compile Include="UserControl\PasswordBoxHelper.cs" />
     <Compile Include="UserControl\WaterMarkText.cs" />
   </ItemGroup>
   <ItemGroup>
