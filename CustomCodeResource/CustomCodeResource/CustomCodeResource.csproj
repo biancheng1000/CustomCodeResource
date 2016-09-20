@@ -36,6 +36,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Common\ExcelOp.cs" />
     <Compile Include="Common\ExportAttribute.cs" />
+    <Compile Include="Common\LogText.cs" />
     <Compile Include="UserControl\CanvasItemsControl .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AttachProperty\VisibilityAnimation.cs" />
