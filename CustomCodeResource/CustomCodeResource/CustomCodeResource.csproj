@@ -59,8 +59,12 @@
     <Compile Include="UserControl\PasswordBoxHelper.cs" />
     <Compile Include="UserControl\WaterMarkText.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="CustomSyles\" />
+    <Resource Include="CustomSyles\CustomStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,3 +3,9 @@ E:\软件和资料\源码参考\CustomCodeResource\CustomCodeResource\CustomCode
 E:\软件和资料\源码参考\CustomCodeResource\CustomCodeResource\CustomCodeResource\bin\Debug\CustomCodeResource.pdb
 E:\软件和资料\源码参考\CustomCodeResource\CustomCodeResource\CustomCodeResource\obj\Debug\CustomCodeResource.dll
 E:\软件和资料\源码参考\CustomCodeResource\CustomCodeResource\CustomCodeResource\obj\Debug\CustomCodeResource.pdb
+L:\github\CustomCodeResource\CustomCodeResource\CustomCodeResource\bin\Debug\CustomCodeResource.dll
+L:\github\CustomCodeResource\CustomCodeResource\CustomCodeResource\bin\Debug\CustomCodeResource.pdb
+L:\github\CustomCodeResource\CustomCodeResource\CustomCodeResource\obj\Debug\CustomCodeResource.csprojResolveAssemblyReference.cache
+L:\github\CustomCodeResource\CustomCodeResource\CustomCodeResource\obj\Debug\CustomCodeResource.g.resources
+L:\github\CustomCodeResource\CustomCodeResource\CustomCodeResource\obj\Debug\CustomCodeResource.dll
+L:\github\CustomCodeResource\CustomCodeResource\CustomCodeResource\obj\Debug\CustomCodeResource.pdb
