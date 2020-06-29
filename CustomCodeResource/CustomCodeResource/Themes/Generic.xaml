@@ -1,0 +1,138 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:FlashPrintHelper.CustomControl">
+
+
+    <!--<Style TargetType="{x:Type local:PrintViewPanel}" BasedOn="{StaticResource {x:Type RadioButton}}">
+        <Setter Property="BorderBrush" Value="Gray"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:PrintViewPanel}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image x:Name="sign" Source="../Resources/Sign.png" Visibility="Hidden" Width="20" Height="20"/>
+
+                        <Border Grid.Row="1" Grid.Column="1" Background="{TemplateBinding Background}" x:Name="radioButtonBorder"
+                        BorderThickness="1" CornerRadius="2">
+                            <Image Source="{TemplateBinding Image}" />
+                        </Border>
+
+                        <ContentPresenter Grid.Row="2" Grid.Column="1" x:Name="contentPresenter"  Focusable="False" HorizontalAlignment="Center" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Grid>
+                   
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder" Value="Blue"/>
+                        </Trigger>
+                       
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Visibility" Value="Visible" TargetName="sign"/>
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder"  Value="Blue"/>
+                            <Setter Property="Foreground" Value="Blue"/>
+                        </Trigger>
+                       
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter Property="Visibility" Value="Hidden" TargetName="sign"/>
+                            <Setter Property="BorderBrush" TargetName="radioButtonBorder"  Value="Gray"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:Sign}"  BasedOn="{StaticResource {x:Type Image}}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Stretch" Value="Fill"/>
+    </Style>-->
+
+    <Style TargetType="{x:Type local:GotoButton}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:GotoButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="25">
+                        <Image x:Name="image" Source="..\Resources\backTop.png" RenderTransformOrigin="0.5,0.5"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Opacity" TargetName="border" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Opacity" TargetName="border" Value="0.6"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource DisabledButtonBackground}"/>
+                        </Trigger>
+                        <Trigger Property="IsTop" Value="False">
+                            <Setter Property="RenderTransform" TargetName="image">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter> 
+    </Style>
+
+    <Style TargetType="{x:Type local:ImageButton}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource DefaultButtonBackground}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource NormalButtonBorder}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ImageButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="{TemplateBinding ImageCornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="image" Source="{TemplateBinding Source}" RenderTransform="{TemplateBinding ImageTransfrom}" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Height="{TemplateBinding Height}" Width="{TemplateBinding Height}">
+                               
+                            </Image>
+                            <ContentPresenter Grid.Column="1" x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource DisabledButtonBackground}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource DisabledButtonBorder}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource DisabledButtonBorder}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource  NormalButtonBorder}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource DefaultButtonBackground}"/>
+                            <Setter Property="Opacity" TargetName="border" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource  NormalButtonBorder}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource DefaultButtonBackground}"/>
+                            <Setter Property="Opacity" TargetName="border" Value="0.65"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>
