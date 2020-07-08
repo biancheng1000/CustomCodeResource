@@ -88,7 +88,22 @@ namespace CustomCode
            return match.Groups[1].Value + domainName;
        }
 
-
+        /// <summary>
+        /// 属性拷贝
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        private static T PropertyCone<T>(T data)
+        {
+            Type ty = typeof(T);
+            var result = (T)Activator.CreateInstance(ty);
+            foreach (var py in ty.GetProperties())
+            {
+                py.SetValue(result, py.GetValue(data));
+            }
+            return result;
+        }
 
     }
 }

@@ -2,6 +2,27 @@
 Thumbs.db
 ehthumbs.db
 
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.dll
+
 # Folder config file
 Desktop.ini
 
@@ -41,3 +62,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+CustomCodeResource/CustomCodeResource/obj/Debug/CustomCodeResource.csproj.CoreCompileInputs.cache
+*.dll
+*.pdb
+*.cache
